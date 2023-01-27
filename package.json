@@ -1,0 +1,23 @@
+{
+  "name": "telegram-chat",
+  "version": "1.0.0",
+  "description": "Server side to control a Telegram bot",
+  "main": "out/app.js",
+  "scripts": {
+    "start": "tsc && node out/app.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alberti-tu/telegram-chat.git"
+  },
+  "author": "alberti-tu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alberti-tu/telegram-chat/issues"
+  },
+  "homepage": "https://github.com/alberti-tu/telegram-chat#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
