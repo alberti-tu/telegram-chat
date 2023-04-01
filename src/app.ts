@@ -19,6 +19,7 @@ async function getChatResponse(request: string): Promise<string> {
 
 if (!configuration.botToken?.length || !configuration.chatToken?.length) {
   console.error('Set API keys on config.ts file.')
+  process.exit()
 }
 
 const config = {
