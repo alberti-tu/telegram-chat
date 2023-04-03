@@ -3,7 +3,7 @@ import { configuration } from '../config'
 import { RequestGPT } from '../models/gpt'
 
 const config = {
-  headers: { Authorization: `Bearer ${configuration.chatToken}` }
+  headers: { Authorization: `Bearer ${configuration.gptToken}` }
 }
 
 export async function getChatResponse(input: string): Promise<string> {

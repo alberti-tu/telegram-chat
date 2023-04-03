@@ -2,7 +2,7 @@ import { Telegraf } from 'telegraf'
 import { configuration } from './config'
 import { getChatResponse } from './lib/chat'
 
-if (!configuration.botToken?.length || !configuration.chatToken?.length) {
+if (!configuration.botToken?.length || !configuration.gptToken?.length) {
   console.error('Set API keys on config.ts file.')
   process.exit()
 }
