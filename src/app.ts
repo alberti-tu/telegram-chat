@@ -1,29 +1,10 @@
-import axios from 'axios'
 import { Telegraf } from 'telegraf'
 import { configuration } from './config'
-
-async function getChatResponse(request: string): Promise<string> {
-  return new Promise<string>(resolve => {
-    const body = { ...configuration.gptRequest, prompt: request }
-
-    axios.post('https://api.openai.com/v1/completions', body, config)
-    .then(response => {
-      resolve(response.data.choices[0].text)
-    })
-    .catch(error => {
-      console.error(error.code, '|', new Date().toLocaleString(), '|', error.response.data.error.message)
-      resolve(error.response.data.error.message)
-    })
-  })
-}
+import { getChatResponse } from './lib/chat'
 
 if (!configuration.botToken?.length || !configuration.chatToken?.length) {
   console.error('Set API keys on config.ts file.')
   process.exit()
-}
-
-const config = {
-  headers: { Authorization: `Bearer ${configuration.chatToken}` }
 }
 
 const bot = new Telegraf(configuration.botToken)

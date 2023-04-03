@@ -3,7 +3,7 @@ import { Configuration } from './models/configuration'
 export const configuration: Configuration = {
   botToken: '',
   chatToken: '',
-  gptRequest: {
-    model: 'text-davinci-003',
+  gpt: {
+    model: 'gpt-3.5-turbo',
   }
 }
